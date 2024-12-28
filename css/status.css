@@ -1,0 +1,663 @@
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	accent-color: #61B247;
+}
+
+body, html {
+	font-family: '29LT Bukra' !important;
+	font-weight: 400;
+	font-size: 20px;
+
+	background: #fffcf7;
+	width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+	color: #13607C;
+}
+
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    z-index: 10;
+    background-color: #E7ECEF;
+}
+
+header > .logo{
+    position: relative;
+    height: 40px;
+}
+header  > nav > .navigation{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+header  > nav > .navigation > li {
+    list-style: none;
+    margin: 0 10px;
+}
+header  > nav > .navigation > li > a{
+    color: #13607C;
+	text-decoration: none;
+	font-size: 20px;
+    letter-spacing: 1px;
+}
+header  > nav > .navigation > li > a:hover{
+    color: #61B948;
+}
+#menuIcon {
+    display: none;
+}
+header > nav > ul > li > a {
+	cursor: pointer;
+}
+
+.banner{
+    background-image: linear-gradient(to bottom right, #1B80A1, #61B247);
+    width: 100%;
+    padding: 80px 60px 10px;
+}
+.banner > h2{
+	font-weight: 440;
+    color: #ffffff;
+    font-size: 37px;
+	text-align: center;
+}
+.picture{
+    background-image: url("../assets/header_pic2.png");
+    background-repeat: no-repeat;
+    background-position: 0% 80%;
+    background-size: cover;
+    
+}
+
+.picture > h2{
+	font-weight: 490;
+    background-image: linear-gradient(to bottom left, #0E4B64, #61B247);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    padding: 30px;
+    
+}
+.line{
+    border: 0px;
+    border-bottom: 9px solid #686868;
+    width: 60%;
+    margin-left: 20%;  
+}
+
+main {
+	width: 100vw;
+	min-height: 60vh;
+	margin: 20px 0;
+}
+
+form {
+	width: 100%;
+	min-height: 500px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	/* background: #fae9b1; */
+	/* border-radius: 20px; */
+	padding: 20px 90px;
+}
+
+/* flight radar */
+
+/* the Rating */
+.rate-box{
+	display: none;
+	position: fixed;
+	z-index: 3;
+	top: 0px;
+	left: 0px;
+	background: #75757581;
+	max-height: 100vh;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	margin-top: 70px;
+	/* bottom: 50px; */
+	
+	/* right: 50px; */
+
+	
+}
+
+.star-widget{
+	/* display: none; */
+	position: absolute;
+	margin: 9%;
+	/* align-items: center; */
+	/* height: 100vh;
+	justify-content: center; */
+	/* background-color:#ADADAD; */
+
+	/* position: relative;
+	width: 600px; */
+	/* background: #111; */
+
+	/* justify-content: space-between; */
+	/* 
+	padding: 70px 30px; */
+	width: 40%;
+	/* text-align: center;
+	align-items: center;
+	justify-content: center; */
+
+	background: #1B80A1;
+	border-radius: 25px;
+	box-shadow:0 5px 10px #0E4B64;
+	/* border: 1px solid #444; */
+	
+	/* flex-direction: column; */
+
+	
+	padding: 25px 50px 35px;
+	
+	
+}
+.star-widget > label{
+	
+	display: flex;
+	font-size: 40px;
+	color: #444;
+	/* padding: 60px; */
+	float: right;
+	transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+.star-widget form{
+	/* display: none; */
+}
+
+input:checked ~ form{
+	display: block;
+}
+.textarea{
+	height: 100px;
+	width: 100%;
+	overflow: hidden;
+  }
+.textarea textarea{
+	height: 100%;
+	width: 100%;
+	outline: none;
+	color: #eee;
+	border: 1px solid #333;
+	background: #222;
+	padding: 10px;
+	font-size: 17px;
+	resize: none;
+  }
+  .textarea textarea:focus{
+	border-color: #444;
+  }
+  form .btn{
+	height: 45px;
+	width: 100%;
+	margin: 15px 0;
+  }
+  form .btn button{
+	height: 100%;
+	width: 100%;
+	border: 1px solid #444;
+	outline: none;
+	background: #222;
+	color: #999;
+	font-size: 17px;
+	font-weight: 500;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.3s ease;
+  }
+  form .btn button:hover{
+	background: #1b1b1b;
+  }
+
+.rate-model {
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+	/* position: relative; */
+	/* background: #1B80A1; */
+	/* padding: 25px 50px 35px; */
+	/* border-radius: 25px;
+	box-shadow:0 5px 10px #0E4B64; */
+}
+
+.rate-model > .rate{
+	/* font-family: '29LT Bukra' !important; */
+	/* display: flex; */
+	
+	/* align-items: center;
+	justify-content: center; */
+
+	/* font-size: 20px;
+	color: #61B247;
+	margin-bottom: 20px; */
+}
+
+/* .rate-model > .rate > #full {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+} */
+
+.modal {
+	display: none; 
+	/* Hidden by default */
+	padding: 0;
+	position: fixed; /* Stay in place */
+	z-index: 4; /* Sit on top */
+	left: 0;
+	top: 0;
+	max-height: 100vh;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	margin-top: 70px;
+}
+
+  
+/* Modal Content/Box */
+.modal-content {
+	padding: 0px;
+	background-color: #fefefe;
+	margin-top: 95px;
+	margin-bottom: 195px;
+	border-radius: 19px;
+	border: 1px solid #888;
+	width: 70%;
+	/* justify-content:space-between; */
+	/* justify-content: center; */
+}
+.containerr {
+	/* padding: 0;
+	margin: 0;
+	box-sizing: border-box; */
+}
+.containerrr{
+	/* box-sizing: border-box; */
+}
+.modal-content > div > img{
+	border-radius: 30px;
+	margin: 50px;
+	position: relative;
+}
+
+.modal-content > div > label {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	margin: 35px 0px;
+}
+
+.check{
+	justify-content: center;
+	display: flex;
+	gap: 6%;
+}
+.check > input{
+	width: 20px;
+}
+
+.modal-content > div > label > input{
+	font-family: '29LT Bukra' !important;
+	font-size: 20px;
+	width: inherit;
+	border: 0;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	padding: 7px 0px;
+	background: transparent;
+}
+
+.animate {
+	-webkit-animation: animatezoom 8.6s;
+	animation: animatezoom 0.6s
+} 
+  
+@-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)} 
+	to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+	from {transform: scale(0)} 
+	to {transform: scale(1)}
+}
+  
+
+
+/* the Status */
+form > .break{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.step-wizard-list{
+	display: flex;
+    margin-top: 20px;
+}
+.step-wizard-list > li{
+	list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-wizard-list > li > .text{
+	font-size: 15px;
+	margin: 0 50px;
+	width: 60%;
+	text-align: center;
+	/* padding: 0px 40px; */
+}
+.step-wizard-list > li > .progress{
+	width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+    margin: 10px 0px;
+    display: grid;
+    place-items: center;
+	justify-content: center;
+    color:#61B247;
+    position: relative;
+    cursor: pointer;
+}
+/* .step-wizard-list > li > .progress > #empty{
+	display: none;
+} */
+.step-wizard-list > li > .progress > #full{
+	z-index: 3;
+	font-size: 30px;
+}
+
+.progress::after{
+    content: " ";
+    position: absolute;
+    width: 126px;
+    height: 5px;
+    background-color: #61B247;
+    right: 29px;
+}
+.one::after{
+    width: 0;
+    height: 0;
+}
+
+.step-wizard-list > li .active{
+	background-color: #61B948;
+	/* color:#13607C; */
+	align-content: center;
+	color:#bdf1a5;
+	
+}
+
+li .active::after{
+	background-color:#9DE87A;
+}
+
+.step-wizard-list > li .active > #full{
+	font-size: 40px;
+    display: flex;
+	
+}
+
+.weight{
+	font-weight: 500;
+	color: #1B80A1;
+}
+
+
+form > label {
+	width: 250px;
+	margin: 25px 60px;
+}
+
+form > label > input {
+	font-family: '29LT Bukra' !important;
+	font-size: 20px;
+	width: inherit;
+	border: 0;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	padding: 7px 0px;
+	background: transparent;
+}
+
+form > label >  textarea{
+	font-family: '29LT Bukra' !important;
+	font-weight: 400;
+	border: 2px solid #9b9b9b;
+	border-radius: 14px;
+	text-align: left;
+	width: inherit;
+	min-width: 110%;
+	padding: 2.5%;
+	min-height: 150px;
+	
+    font-size: 18px;
+	background: transparent;
+	margin-top: 7px;
+}
+
+
+
+.buttons{
+	/* font-family: '29LT Bukra' !important; */
+	font-weight: 450;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	font-size: 20px;
+	margin: 50px 0px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	/* margin-left: 17px; */
+	/* width: 200px; */
+	/* margin: 15px 20px; */
+	
+}
+.Button , .cancelbtn, button{
+	
+	border-color: #ADADAD;
+	border-radius: 20px;
+	height: 36px;
+	background-color: transparent;
+	width: 220px;
+	margin: 17px;
+	text-align: center;
+	font-size: 21px;
+	justify-content: center;
+	
+}
+.Button:hover , .cancelbtn:hover , button:hover {
+	font-weight: 450;
+	color: #ffffff;
+	background-image: linear-gradient(to bottom right, #1B80A1, #9DE87A);
+	transition: all 0.2s ease-in-out;
+} 
+
+
+
+footer{
+	background-color: #c4d1d7;
+	position: sticky;
+    width: 100%;
+	top: 100vh;
+	box-sizing: border-box;
+	
+}
+
+footer > p {
+	font-size: 14px;
+    text-align: center;
+	padding-top: 5px;
+	padding-bottom: 6px;
+}
+
+@media screen and (max-width: 1350px) {
+	.modal-content > div > img{
+		height: 330px;
+		margin: 30px;
+		width: 190px;
+		/* border-radius: 70%; */
+	}
+}
+
+@media screen and (max-width: 957px) {
+	*{
+		font-size: 17px;
+	}
+	form {
+		
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1px;
+	}
+	form > label {
+		width: 300px;
+		margin: 20px 60px;
+	}
+	form > label > input {
+		/* width: 80%; */
+		width: inherit;
+		padding: 7px 0px;
+	}
+	
+	.banner{
+		padding: 80px 19px 10px;
+	}
+	.banner > h2{
+		font-size: 20px;
+		font-weight: 400;
+	}
+	.picture{
+		background-position: 0% 100%;
+	}
+	.picture > h2{
+		font-size: 20px;
+		padding: 10px;
+	}
+
+	header{
+		padding: 15px 40px;
+	}
+	header > .logo{
+		position: relative;
+		height: 40px;
+
+	}
+	.navbar {
+		position: relative;
+		display: block;
+		width: 40%;
+		display: none;
+	}
+	.navbar.navactive {
+		display: inline;
+	}
+
+	span > i{
+		color: #61B247;
+		
+	}
+	#menuIcon {
+		display: inline;
+		color: #79c85b;
+		font-weight: 600;
+		position: absolute;
+		font-size: 25px;
+		margin-left: 85%;
+		z-index: 222;
+		/* z-index: 5; */
+		/* float: right; */
+		padding: 1%;
+		cursor: pointer;
+		/* border: 3px solid rgb(221, 221, 221); */
+		/* border-radius: 4px; */
+	}
+	.navbar > .navigation {
+		position: absolute;
+		width: 130%;
+		height: 30vh;
+		background-color: rgb(200, 200, 200);
+	}
+	.navbar .navigation li {
+		display: block;
+		margin-top: 0px;
+		width: 100%;
+		height: 0px;
+		text-align: left;
+		position: relative;
+		top: 16px;
+		padding: 2%;
+	}
+	.navigation li a {
+		/* margin-left: 20px; */
+		font-family: '29LT Bukra' !important;
+		font-weight: 450;
+	}
+	.buttons > .Button {
+		margin-top: 40px;
+	}
+
+	/* form 2 */
+	.modal-content > div > img{
+		display: none;
+	}
+	
+	.modal-content > div > label{
+		width: 230px;
+	}
+	.modal-content > div > label > input{
+		font-size: 16px;
+	}
+	.check{
+		gap: 3%;
+	}
+	.check > input{
+		width: 18px;
+	}
+	.cancelbtn, button{
+		font-size: 16px;
+		width: 150px;
+	}
+}

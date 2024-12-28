@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../css/index.css">
+    <script defer src="../js/index.js"></script>
+
+    <link rel="stylesheet" href="../css/fontawesome.css" />
+    <script defer src="../js/fontawesome.js"></script>
+
+</head>
+<body>
+
+
+    <header>
+        <img class= "logo" src="../assets/logo_sgs.png">
+        <span class="fa-solid fa-bars" id="menuIcon" onclick="toggle()"></span>
+        <nav  class="navbar" id="nav">
+            <ul class="navigation">
+                <li>
+                    <a href="https://www.saudiags.com" class="active">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.saudiags.com/about-us">
+                        About us
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.saudiags.com/contact-us">
+                        Contact us
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header> 
+    <!-- <img class= "logo" src="logo_sgs.png"> -->
+    <div class="banner">
+        <h2>We always welcome you and look forward to meeting your expectations.</h2>
+    </div>
+    
+
+    <main>
+        <section>
+            
+            <form id="contact-form" action="/index" method="post">
+
+                <label>
+                    E-mail:
+                    <input name="email" type="email" id="email" required>
+                </label>
+                
+                <label>
+                    Airline:
+                    <input name="air" type="text" id="Airline" readonly>
+                </label>
+
+                <label>
+                    IATA Code:
+                    <input name="iata" type="IATA" id="IATA" readonly>
+                </label>
+
+                <label>
+                    Key Account:
+                    <input name="key" type="key" id="key" readonly>
+                </label>
+
+                <label>
+                    Station:
+                    <select class="form-select-station" name="station" required>
+                        <option selected></option>
+                        <option value="1">AHB</option>
+                        <option value="2">AJF</option>
+                        <option value="3">AQI</option>
+                        <option value="3">BHH</option>
+                        <option value="4">DMM</option>
+                        <option value="5">EAM</option>
+                        <option value="6">ELQ</option>
+                        <option value="7">GIZ</option>
+                        <option value="8">HAZ</option>
+                        <option value="9">JED</option>
+                        <option value="10">MED</option>
+                        <option value="11">NUM</option>
+                        <option value="12">RAE</option>
+                        <option value="13">RUH</option>
+                        <option value="14">TIF</option>
+                        <option value="15">TUU</option>
+                        <option value="16">ULH</option>
+                        <option value="17">YNB</option>
+
+                    </select>
+                </label>
+
+                <label>
+                    Flight Number:
+                    <div class="input-group">
+                        <!-- <span class="input-group-text">First and last name</span> -->
+                        <input type="text" id="flight_Zip" name="flight_Zip" readonly>
+                        <input type="text" id="flight_Number" name="flight_Number" required>
+                    </div>
+
+                    <!-- <div >
+                        <input type="flight Zip" value="" >
+                        <input type="flight Number" value="">
+                    </div> -->
+                    
+                </label>
+
+                <label>
+                    Flight Date:
+                    <input name="datePickerId" type="date" id="datePickerId" max="" min="" required>
+                </label>
+
+                <label>
+                    Area of Desparency:
+                    <div class="form-check form-check-inline" >
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Terminal" required>
+                        <label class="form-check-label" for="inlineRadio1">Terminal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="RAMP" required>
+                        <label class="form-check-label" for="inlineRadio2">RAMP</label>
+                    </div>
+                    
+                </label>
+
+                <label>
+                    Nature of Complaint:
+                    <select name="category" class="form-select-nature"  required>
+                        <option selected>Select</option>
+                        <option value="1">Passenger and Baggage</option>
+                        <option value="2">Cargo and Mail</option>
+                        <option value="3">Mail Only</option>
+                        <option value="4">Aircraft and Ramp Handling</option>
+                        <option value="5">Technical and Aircraft Equipment</option>
+                        <option value="6">Damage to Aircraft</option>
+                        <option value="7">Information Technology/Communication/Equipment Failures</option>
+                        <option value="8">Flight Operations and Crewing</option>
+                        <option value="9">Weather</option>
+                        <option value="10">Air Traffic Flow Management (ATFM) Restrictions</option>
+                        <option value="11">Airport and Governmental Authorities</option>
+                        <option value="12">Reactionary</option>
+                        <option value="13">Others</option>
+                    </select>
+                </label>
+
+                <label>
+                    Case Reason:
+                    <select name="reason" class="form-select-reason" aria-label="Default select example" required>
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </label>
+                
+                <label class="des">
+                    Case Description:
+                    <textarea name="description" id="exampleFormControlTextarea1" placeholder="write more information"> 
+                    </textarea>
+                </label>
+
+                <label >
+                    Document:
+                    <input type="file" id="myFile" name="file">
+                </label>
+
+                <p class="buttons">
+                    <input class="Button" id="clearButton" type="reset" value="Clear" />
+                    <input class="Button" id="submitButton" type="submit" value="Submit" />
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p> Noora Amer </p>
+        <p>&copy; SGS 2023. All Rights Reserved.</p>
+    </footer>
+
+    <div id="output"></div>
+    
+</body>
+
+
+</html>
