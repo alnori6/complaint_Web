@@ -1,6 +1,6 @@
-Complaint Webpage
+#Complaint Webpage
 
-About The Project
+##About The Project
 
 This project was developed to streamline the complaint submission and resolution process, solving four key challenges commonly faced in B2B operations:
 	1.	Reduced Resolution Time: The time required to address issues has significantly decreased.
@@ -10,14 +10,14 @@ This project was developed to streamline the complaint submission and resolution
 
 
 
- Why This Project Is Useful
+ ##Why This Project Is Useful
 
 Efficient complaint management is essential for maintaining strong B2B relationships. This project simplifies and automates key aspects of the complaint process, leading to better issue resolution and improved customer satisfaction.
 
 
 
 
-Drawbacks
+##Drawbacks
 
 While the project provides numerous advantages, there are some limitations:
 	•	It currently focuses only on B2B complaints and may require additional customization for B2C scenarios.
@@ -26,7 +26,7 @@ While the project provides numerous advantages, there are some limitations:
 
 
 
- Architecture
+ ##Architecture
 
 1. Complaint Form
 
@@ -58,7 +58,7 @@ This section includes a login pop-up for Customer Care employees. It enables the
 
 
 
-Training and Development
+##Training and Development
 
 This project was developed during a self-training period while working with SGS Company. During this time, I attended multiple courses in aviation and safety.
 
