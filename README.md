@@ -1,6 +1,6 @@
-#Complaint Webpage
+# Complaint Webpage
 
-##About The Project
+## About The Project
 
 This project was developed to streamline the complaint submission and resolution process, solving four key challenges commonly faced in B2B operations:
 	1.	Reduced Resolution Time: The time required to address issues has significantly decreased.
@@ -10,14 +10,14 @@ This project was developed to streamline the complaint submission and resolution
 
 
 
- ##Why This Project Is Useful
+## Why This Project Is Useful
 
 Efficient complaint management is essential for maintaining strong B2B relationships. This project simplifies and automates key aspects of the complaint process, leading to better issue resolution and improved customer satisfaction.
 
 
 
 
-##Drawbacks
+## Drawbacks
 
 While the project provides numerous advantages, there are some limitations:
 	•	It currently focuses only on B2B complaints and may require additional customization for B2C scenarios.
@@ -26,7 +26,7 @@ While the project provides numerous advantages, there are some limitations:
 
 
 
- ##Architecture
+ ## Architecture
 
 1. Complaint Form
 
@@ -58,13 +58,39 @@ This section includes a login pop-up for Customer Care employees. It enables the
 
 
 
-##Training and Development
+## Training and Development
 
-This project was developed during a self-training period while working with SGS Company. During this time, I attended multiple courses in aviation and safety.
+This project was developed as part of my summer training at Saudi Ground Services (SGS). During this period, I attended multiple courses in aviation and safety.
 
 My main role was as a Product Developer in the Commercial Department. I worked on improving the Hayakum UI/UX website project while contributing to the Customer Care section to enhance user experience and efficiency.
 
 
 
 
+
+
+
+
+
+
+
+# Getting Help
+
+If you encounter any issues, please refer to the Issues section in this repository or reach out via email at Eng.noori6@hotmail.com
+
+
+
+
+
+
+# Contribution and Maintenance
+
+This project is maintained and updated by Noora Amer. Contributions are welcome, but all submissions will be reviewed to ensure quality and alignment with the project’s goals.
+
+
+
+
+# License and Restrictions
+
+This repository and its contents are restricted for educational and personal use only. Any use, reproduction, or distribution of the project files, designs, or any information within this repository without explicit permission is a violation of intellectual property rights and strictly prohibited. Violators may face legal action.
 
